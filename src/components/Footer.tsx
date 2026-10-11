@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, MapPin } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import Logo from "@/components/Logo";
 import Hours from "@/components/Hours";
@@ -30,6 +30,12 @@ export default function Footer() {
             <MapPin size={16} className="mt-0.5 shrink-0" />
             <a href={SITE.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brand">
               {SITE.address} <span className="text-concrete-400">(ver mapa)</span>
+            </a>
+          </p>
+          <p className="mb-3 flex gap-2.5 text-sm text-concrete-200">
+            <Phone size={16} className="mt-0.5 shrink-0" />
+            <a href={`tel:${SITE.phoneE164}`} className="hover:text-brand">
+              {SITE.phoneDisplay}
             </a>
           </p>
           <Hours className="max-w-sm text-concrete-200" />

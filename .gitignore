@@ -1,0 +1,13 @@
+node_modules
+.next
+.env
+.env.local
+*.db
+*.db-journal
+*.tsbuildinfo
+next-env.d.ts
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Documentación local (incluye claves y fotos pesadas) - no subir al repo
+Documentación/

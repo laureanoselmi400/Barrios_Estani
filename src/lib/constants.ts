@@ -69,6 +69,8 @@ export const SITE = {
   tagline: "Tienda de ropa · Industria nacional",
   instagram: "barriostreet.co",
   instagramUrl: "https://www.instagram.com/barriostreet.co/",
+  phoneDisplay: "+54 9 2477 698738",
+  phoneE164: "+5492477698738",
   address: "Mitre 493, Pergamino, Buenos Aires",
   addressFull: ADDRESS_FULL,
   mapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS_FULL)}`,

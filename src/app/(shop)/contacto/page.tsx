@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Instagram, MapPin } from "lucide-react";
+import { Instagram, MapPin, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Hours from "@/components/Hours";
 import { SITE } from "@/lib/constants";
+import { whatsappLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -20,6 +21,17 @@ export default function ContactoPage() {
 
         <div className="space-y-8">
           <ul className="space-y-5 text-sm">
+            <li className="flex gap-3">
+              <Phone size={18} className="mt-0.5 shrink-0" />
+              <div>
+                <a href={`tel:${SITE.phoneE164}`} className="font-semibold underline underline-offset-4">{SITE.phoneDisplay}</a>
+                <p className="mt-1 text-xs text-concrete-500">
+                  <a href={whatsappLink("Hola BARRIO STREET! Quería hacerles una consulta 👋")} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-ink">
+                    Escribinos por WhatsApp
+                  </a>
+                </p>
+              </div>
+            </li>
             <li className="flex gap-3">
               <MapPin size={18} className="mt-0.5 shrink-0" />
               <div>

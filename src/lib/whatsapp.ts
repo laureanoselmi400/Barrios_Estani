@@ -1,4 +1,4 @@
-const number = () => process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5491100000000";
+const number = () => process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "5492477698738";
 
 /** Enlace wa.me (abre WhatsApp Web en desktop o la app en mobile). */
 export function whatsappLink(message?: string) {

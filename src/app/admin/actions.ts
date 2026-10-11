@@ -11,10 +11,10 @@ import { slugify } from "@/lib/format";
 /* ---------- Sesión ---------- */
 
 export async function loginAction(_prev: { error?: string } | undefined, formData: FormData) {
-  const email = String(formData.get("email") ?? "");
+  const usuario = String(formData.get("usuario") ?? "");
   const password = String(formData.get("password") ?? "");
 
-  if (!checkCredentials(email, password)) {
+  if (!checkCredentials(usuario, password)) {
     await new Promise((r) => setTimeout(r, 700)); // frena fuerza bruta básica
     return { error: "Credenciales incorrectas" };
   }

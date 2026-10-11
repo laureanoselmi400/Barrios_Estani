@@ -18,10 +18,10 @@ const safeEqual = (a: string, b: string) => {
   return ba.length === bb.length && timingSafeEqual(ba, bb);
 };
 
-export function checkCredentials(email: string, password: string) {
-  const okEmail = safeEqual(email.trim().toLowerCase(), (process.env.ADMIN_EMAIL ?? "").toLowerCase());
+export function checkCredentials(usuario: string, password: string) {
+  const okUser = safeEqual(usuario.trim().toLowerCase(), (process.env.ADMIN_EMAIL ?? "").toLowerCase());
   const okPass = safeEqual(password, process.env.ADMIN_PASSWORD ?? "");
-  return okEmail && okPass && !!process.env.ADMIN_PASSWORD;
+  return okUser && okPass && !!process.env.ADMIN_PASSWORD;
 }
 
 export async function createSession() {

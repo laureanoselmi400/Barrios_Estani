@@ -8,7 +8,7 @@ const client = () => {
   return new MercadoPagoConfig({ accessToken: token, options: { timeout: 8000 } });
 };
 
-export const siteUrl = () => process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+export const siteUrl = () => process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 type PrefItem = { id: string; title: string; quantity: number; unit_price: number; picture_url?: string };
 

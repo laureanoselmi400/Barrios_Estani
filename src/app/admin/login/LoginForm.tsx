@@ -10,8 +10,8 @@ export default function LoginForm() {
   return (
     <form action={action} className="space-y-4 border border-concrete-200 bg-white p-6">
       <div>
-        <label htmlFor="email" className="label">Email</label>
-        <input id="email" name="email" type="email" required autoComplete="username" className="input" />
+        <label htmlFor="usuario" className="label">Usuario</label>
+        <input id="usuario" name="usuario" type="text" required autoComplete="username" className="input" />
       </div>
       <div>
         <label htmlFor="password" className="label">Contraseña</label>

@@ -7,7 +7,7 @@ const display = Archivo({ subsets: ["latin"], variable: "--font-display", weight
 // Tipografía redondeada y pesada, la más cercana al logo "Barrio."
 const logo = Poppins({ subsets: ["latin"], variable: "--font-logo", weight: ["700", "800"] });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
